@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:700);
+
+.background{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(225deg, rgba(239,142,56,1) 0%, rgba(16,141,199,1) 100%);
+    align-items: center;
+    position: relative;
+    .block{
+        position: relative;
+        top: 35%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 60%;
+        max-width: 600px;
+        min-width: 280px;
+        height: 50vh;
+        background-color: #f1f1f1;
+        margin: 0 auto;
+        box-shadow:0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);    
+        .line{
+            display: flex;
+            justify-content: center;
+        }
+        .logText{
+            display: flex;
+            justify-content: center;
+            button{
+                font-family: "Ubuntu", sans-serif;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                background: transparent;
+                border: none;
+                font-size: 20px;
+                color: #303030;
+                position: relative;
+                text-transform: uppercase;
+                text-decoration: none;
+                padding-bottom: 8px;
+                outline: none;
+                &:before, &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: 3px;
+                    left: 0;
+                    right: 0;
+                    height: 3px;
+                    background-color: rgba(16,141,199,1);
+                }
+                &.reg{
+                    &:before, &:after{
+                        background-color: rgba(239,142,56,1);
+                    }
+                }
+                &:before {
+                    opacity: 0;
+                    transform: translateY(-8px);
+                    transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s;
+                }
+                &:after {
+                    opacity: 0;
+                    transform: translateY(4px);
+                    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
+                }
+                &:hover:before, &:hover:after, &:focus:before, &:focus:after {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                &:hover:before, &:focus:before {
+                    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;   
+                }
+                &:hover:after, &:focus:after {
+                    transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.2s;
+                }
+            }
+        }
+    }
+}
+
+input{
+    height: 45px;
+    width: 65%;
+    min-width: 40px;
+    min-width: 250px;
+    background-color: rgba(0, 0, 0, .02);
+    border: 1.5px solid transparent;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Merriweather', Georgia, serif;
+    display: block;    
+}

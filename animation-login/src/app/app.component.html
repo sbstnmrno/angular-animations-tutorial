@@ -1,0 +1,30 @@
+<section class="background">
+  <section class="block">      
+      <div class="logText">
+          <button (click)="login()">Ingresar</button>
+          <button (click)="register()" class="reg">Registrarse</button>
+      </div>
+      <nav>
+        <form class="showLogin">
+            <label>
+                  <p>
+                  <input name="e-mail" placeholder="Correo Electrónico">
+                  </p>
+            </label>
+            <label>
+                <p>
+                <input type="password" name="password" placeholder="Contraseña">
+                  </p>
+            </label>            
+        </form>      
+      </nav>
+      <div class="line">
+        <app-login [currentState]="toState"></app-login>
+        <app-register [currentState]="toState"></app-register>
+      </div>
+      <br>
+  </section>  
+</section>
+
+
+<router-outlet></router-outlet>
